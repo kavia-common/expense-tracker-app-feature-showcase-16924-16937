@@ -11,6 +11,16 @@ npm run dev
 
 Open the Studio URL and select the `ExpenseTrackerShowcase` composition.
 
+If the preview does not load:
+- Ensure dependencies are installed, and you are using React 18 with Remotion v4.
+- This repo pins React to 18.3.1 for compatibility with Remotion 4.0.286.
+- If you accidentally upgraded React to 19, run:
+  ```bash
+  npm pkg set dependencies.react=18.3.1 dependencies.react-dom=18.3.1
+  npm install
+  ```
+- Then restart the studio: `npm run dev`.
+
 ## Render
 
 ```bash
