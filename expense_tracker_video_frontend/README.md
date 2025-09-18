@@ -1,54 +1,49 @@
-# Remotion video
+# Expense Tracker Video (Remotion)
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.gif">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+This project renders an instructional/demo video of an Expense Tracker app using Remotion, themed with "Ocean Professional" (blue & amber accents), modern minimal UI, rounded corners, subtle shadows, and smooth transitions.
 
-Welcome to your Remotion project!
+## Preview
 
-## Commands
-
-**Install Dependencies**
-
-```console
+```bash
 npm i
-```
-
-**Start Preview**
-
-```console
 npm run dev
 ```
 
-**Render video**
+Open the Studio URL and select the `ExpenseTrackerShowcase` composition.
 
-```console
-npx remotion render
+## Render
+
+```bash
+# Renders the ExpenseTrackerShowcase composition to out/video.mp4
+npx remotion render src/index.ts ExpenseTrackerShowcase out/video.mp4 --codec=h264
 ```
 
-**Upgrade Remotion**
+You may pass a voiceover/music file:
 
-```console
-npx remotion upgrade
+```bash
+npx remotion render src/index.ts ExpenseTrackerShowcase out/video.mp4 \
+  --props='{"voiceoverUrl":"https://example.com/voiceover.mp3"}'
 ```
 
-## Docs
+## Composition
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+- Main: `ExpenseTrackerShowcase` (duration 870 frames at 30fps ~ 29s)
+- Scenes:
+  - Intro (title, feature badges)
+  - Dashboard (overview, categories, trend)
+  - Transactions (list with filters)
+  - Budgets (progress and status)
+  - Outro (CTA)
 
-## Help
+## Theme
 
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
+Centralized in `src/theme.ts`. Adjust colors, radius, shadows, or gradient as needed.
 
-## Issues
+## Development Notes
 
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
+- Keep styling modern and minimal.
+- Prefer rounded corners, subtle gradients, and light shadows.
+- Use `components/Primitives.tsx` for common animated primitives.
+- Mocked screens live in `src/scenes/Screens.tsx`.
 
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+For more on Remotion, see the [docs](https://www.remotion.dev/docs/).
