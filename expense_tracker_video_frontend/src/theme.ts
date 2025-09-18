@@ -1,3 +1,5 @@
+import React from "react";
+
 export type Theme = {
   name: string;
   description: string;
